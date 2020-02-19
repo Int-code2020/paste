@@ -1,0 +1,402 @@
+<html>
+<head>
+</head><style>
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	background: #173d50;
+	font-family: 'Open sans', sans-serif;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+
+
+.wrap{
+	width: 90%;
+	max-width: 1170px;
+	margin: 50px auto;
+}
+
+.miswitch{
+	border: 1px solid #225B78;
+	border-radius: 20px;
+	color: #fff;
+	position: relative;
+	margin: 0px auto 50px;
+	width: 200px;
+	overflow: hidden;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.miswitch a{
+	font-size: 14px;
+	z-index: 2;
+	position: relative;
+	width: 50%;
+	text-align: center;
+	cursor: pointer;
+}
+
+.swicht-btn{
+	position: absolute;
+	background: #0C1F28;
+	width: 50%;
+	height: 90%;
+	border-radius: 20px;
+	top: 2px;
+	left: 2px;
+	z-index: 1;
+	transition: all .5s;
+}
+
+.on{
+	left: 97px;
+}
+
+/* Tabla de precio*/
+
+.pricing-wrap{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.pricing-table{
+	width: 32%;
+	transition: transform .2s ease;
+
+	-webkit-perspective: 2000px;
+	perspective: 2000px;
+}
+
+.pricing-table:hover{
+	transform: scale(1.07);
+}
+
+.pricing-table-cont{
+	background: #fff;
+	text-align: center;
+	position: relative;
+	height: 500px;
+
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	transition: .3s ease;
+}
+
+.pricing-table-month , .pricing-table-year{
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #fff;
+}
+
+.pricing-table-year{
+	transform: rotateY(180deg);
+}
+
+.rotando-tabla{
+	transform: rotateY(180deg);
+}
+
+.pricing-table-head{
+	color: #9ad2a0;
+	padding: 30px 0px;
+}
+
+.pricing-table-head h2{
+	font-size: 16px;
+	letter-spacing: 2px;	
+	font-weight: bold;
+}
+
+.pricing-table-head h3{
+	font-size: 70px;
+	font-weight: 400;
+	display: inline;
+}
+
+.pricing-table-head h3 sup, .pricing-table-head h3 sub{
+	font-size: 20px;
+	color: #ABB8C0;
+	font-weight: 600;
+}
+
+.pricing-table-head h3 sub{
+	font-size: 13px;
+}
+
+.pricing-table-head.estandar-title h2,
+.pricing-table-head.estandar-title h3,
+.pricing-table-head.estandar-title h3 sup,
+.pricing-table-head.estandar-title h3 sub{
+	color: #fd0000
+}
+
+.pricing-table-list li{
+	background: #F1F3F5;
+	padding: 10px 0;
+}
+
+.pricing-table-list li:nth-child(2n){
+	background: #fff;
+}
+
+.pricing-table-button{
+	display: block;
+	width: 100%;
+	padding: 20px 0;
+	background: #0C1F28;
+	color: #fff;
+	margin-top: 23px;
+}
+
+.pricing-table-button.estandar{
+	background: #E97D68;
+}
+/*============DEL FORM EXCLUSIVO==============*/
+.pricing-table1{
+	width: 32%;
+	transition: transform .2s ease;	-webkit-perspective: 2000px;	perspective: 2000px;
+}
+
+.pricing-table1:hover{
+	transform: scale(1.07);
+}
+
+.pricing-table-cont1{
+	background: #fff;	text-align: center;
+	position: relative;	height: 500px;	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;	transition: .3s ease;
+}
+
+.pricing-table-month1 , .pricing-table-year1{
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: absolute;	width: 100%;	height: 100%;
+	top: 0;	left: 0;	background: #fff;
+}
+
+.pricing-table-year1{
+	transform: rotateY(180deg);
+}
+.pricing-table-head1{
+	color: #ff8a2c;	padding: 30px 0px;
+}
+
+.pricing-table-head1 h2{
+	font-size: 16px;	letter-spacing: 2px;		font-weight: bold;
+}
+
+.pricing-table-head1 h3{
+	font-size: 70px;	font-weight: 400;	display: inline;
+}
+
+.pricing-table-head1 h3 sup, .pricing-table-head1 h3 sub{
+	font-size: 20px;	color: #ABB8C0;	font-weight: 600;
+}
+
+.pricing-table-head1 h3 sub{
+	font-size: 13px;
+}
+
+.pricing-table-head1.estandar-title1 h2,
+.pricing-table-head1.estandar-title1 h3,
+.pricing-table-head1.estandar-title1 h3 sup,
+.pricing-table-head1.estandar-title1 h3 sub{
+	color: #E97D68;
+}
+
+.pricing-table-list1 li{
+	background: #F1F3F5;	padding: 10px 0;
+}
+
+.pricing-table-list1 li:nth-child(2n){
+	background: #fff;
+}
+
+.pricing-table-button1{
+	display: block;	width: 100%;	padding: 20px 0;	background: #0C1F28;
+	color: #fff;	margin-top: 23px;
+}
+
+.pricing-table-button1.estandar{
+	background: #E97D68;
+}
+
+
+/*=========================================*/
+/* RESPONSIVE ===============================  */
+@media screen and (max-width: 750px){
+	.pricing-table{
+		width: 72%;		margin-bottom: 20px;
+	}
+
+	.pricing-wrap{
+		justify-content: center;
+	}
+
+	.pricing-table:hover{
+		transform: scale(1.0) ;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.pricing-table{
+		width: 90%;
+	}
+}
+</style>
+<body>
+	<div class="wrap">
+		<div class="pricing-wrap">
+			<div class="pricing-table">
+				<div class="pricing-table-cont">
+					<div class="pricing-table-month">
+						<div class="pricing-table-head">
+							<h2>Usual</h2>
+							<h3><sup>$</sup>219<sub>/ persona</sub></h3>
+						</div>
+						<ul class="pricing-table-list">
+							<li><span>Tarifas</span> de Entrada</li>
+							<li><span> </span>Transporte</li>
+							<li><span> </span>Box Lunch</li>
+							<li><span> </span>Guia</li>	
+							<li><span> </span> </li>	
+							<li><span> </span> </li>
+							<li><span> </span> </li>
+							<li><span> </span> </li>
+							<li><span> </span> </li>
+							<li><span> </span> </li>					
+						</ul>
+						<a href="#" class="pricing-table-button">Seleccionar plan</a>
+					</div>
+					<div class="pricing-table-year">
+						<div class="pricing-table-head">
+							<h2>Usual</h2>
+							<h3><sup>$ </sup>219<sub>/persona</sub></h3>
+						</div>
+						<ul class="pricing-table-list">
+							<li><span>Tarifas</span> de Entrada</li>
+							<li><span> </span>Transporte</li>
+							<li><span> </span>Box Lunch</li>
+							<li><span> </span>Guia</li>
+							<li><span> </span> </li>
+							<li><span> </span> </li>
+							<li><span> </span> </li>
+							<li><span> </span> </li>
+							<li><span> </span> </li>
+						</ul>
+						<a href="#" class="pricing-table-button">Seleccionar plan</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="pricing-table">
+				<div class="pricing-table-cont">
+					<div class="pricing-table-month">
+						<div class="pricing-table-head estandar-title">
+							<h2>Destacado</h2>
+							<h3><sup>$ </sup>229<sub>/persona</sub></h3>
+						</div>
+						<ul class="pricing-table-list">
+							<li><span>Tarifas</span> de Entrada</li>
+							<li><span> </span>Transporte</li>
+							<li><span> </span>Box Lunch</li>
+							<li><span> </span>Guia</li>
+							<li><span>Equipamento </span>contra rayos UV</li>	
+							<li><span> </span> </li>
+							<li><span> </span> </li>
+							<li><span> </span> </li>	
+							<li><span> </span> </li>				
+						</ul>
+						<a href="#" class="pricing-table-button estandar">Seleccionar plan</a>
+					</div>
+					<div class="pricing-table-year">
+						<div class="pricing-table-head estandar-title"">
+							<h2>Destacado</h2>
+							<h3><sup>$ </sup>229<sub>/persona</sub></h3>
+						</div>
+						<ul class="pricing-table-list">
+							<li><span>Tarifas</span> de Entrada</li>
+							<li><span> </span>Transporte</li>
+							<li><span> </span>Box Lunch</li>
+							<li><span> </span>Guia</li>
+							<li><span>Equipamento </span>contra rayos UV</li>
+							<li><span> </span> </li>
+							<li><span> </span> </li>
+							<li><span> </span> </li>
+							<li><span> </span> </li>
+						</ul>
+						<a href="#" class="pricing-table-button estandar">Seleccionar plan</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="pricing-table1">
+				<div class="pricing-table-cont1">
+					<div class="pricing-table-month1">
+						<div class="pricing-table-head1">
+							<h2>Exclusivo</h2>
+							<h3><sup>$ </sup>239<sub>/persona</sub></h3>
+						</div>
+						<ul class="pricing-table-list1">
+							<li><span>Tarifas</span> de Entrada</li>
+							<li><span> </span>Transporte</li>
+							<li><span> </span>Box Lunch PLUS</li>
+							<li><span> </span>Guia</li>
+							<li><span>Equipamento </span>contra rayos UV(Proteccion)</li>
+							<li><span> Recojo </span> de su Hotel</li>
+							<li><span> Album </span> de Fotos</li>
+							
+						</ul>
+						<a href="#" class="pricing-table-button1">Seleccionar plan</a>
+					</div>
+					<div class="pricing-table-year1">
+						<div class="pricing-table-head1">
+							<h2>Exclusivo</h2>
+							<h3><sup>$ </sup>239<sub>/persona</sub></h3>
+						</div>
+						<ul class="pricing-table-list1">
+							<li><span>Tarifas</span> de Entrada</li>
+							<li><span> </span>Transporte</li>
+							<li><span> </span>Box Lunch PLUS</li>
+							<li><span> </span>Guia</li>
+							<li><span>Equipamento </span>contra rayos UV(Proteccion)</li>
+							<li><span> Recojo </span> de su Hotel</li>
+							<li><span> Album </span> de Fotos</li>
+							
+						</ul>
+						<a href="#" class="pricing-table-button1">Seleccionar plan</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<script>$('.miswitch a').click(function(){
+		$('.swicht-btn').toggleClass('on');
+		$('.pricing-table-cont').toggleClass('rotando-tabla');
+});
+</script>
+</body>
+</html>
